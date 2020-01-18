@@ -45,7 +45,7 @@ ALLOWED_CLIENT_HOSTS = get_list(
     os.environ.get("ALLOWED_CLIENT_HOSTS", "localhost,127.0.0.1,34.231.0.108")
 )
 
-INTERNAL_IPS = get_list(os.environ.get("INTERNAL_IPS", "127.0.0.1","34.231.0.108"))
+INTERNAL_IPS = get_list(os.environ.get("INTERNAL_IPS", "127.0.0.1,34.231.0.108"))
 
 # Some cloud providers (Heroku) export REDIS_URL variable instead of CACHE_URL
 REDIS_URL = os.environ.get("REDIS_URL")
