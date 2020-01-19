@@ -114,12 +114,12 @@
     <div class="navbar__brand container-fluid d-block">
       <div class="container">
         <div class="row no-gutters">
-          <div class="col-8 col-md-4 navbar__logo">
+          <div class="col-8 col-md-4 navbar__logo" style="padding:0px">
             <div class="menu-icon-mobile d-md-none navbar__brand__menu-toggle closed open">
               <svg data-src="{% static "images/mobile-menu.svg" %}" width="28px" height="20px"/>
             </div>
             <a href="{% url 'home' %}">
-              <svg data-src="{% static "images/logo-light.svg" %}"/>
+              <img height="40" src="{% static "images/logo-light.png" %}"/>
             </a>
           </div>
           <div class="col-2 col-md-5 navbar__search static">
