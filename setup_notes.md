@@ -13,17 +13,17 @@ sudo tar xzf Python-3.7.4.tgz
 cd Python-3.7.4
 sudo ./configure --enable-optimizations
 sudo make altinstall
-rm /usr/bin/python
-rm /usr/bin/pip
+sudo rm /usr/bin/python
+sudo rm /usr/bin/pip
 sudo ln -s /usr/local/bin/python3.7 /usr/bin/python
 sudo cp /usr/local/bin/pip3.7 /usr/bin/pip
 sudo yum install python-devel python-pip python-setuptools python-wheel python3-devel mysql-devel -y
 
 
 # Docker
-$ sudo yum install -y docker
-$ sudo service docker start
-$ sudo usermod -a -G docker ec2-user
+sudo yum install -y docker
+sudo service docker start
+sudo usermod -a -G docker ec2-user
 
 sudo curl -L "https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
@@ -35,7 +35,7 @@ curl -sL https://rpm.nodesource.com/setup_10.x | bash -
 sudo yum install -y nodejs
 
 
-# Close the repo
+# Clone the repo
 git clone https://github.com/closelookadmin/saleor.git
 cd saleor
 
