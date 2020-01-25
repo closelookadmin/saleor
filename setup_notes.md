@@ -38,7 +38,12 @@ sudo yum install -y nodejs
 # Clone the repo
 git clone https://github.com/closelookadmin/saleor.git
 cd saleor
+git checkout closelook
 
+
+# Node modules 
+npm i
+npm run-script build-assets
 
 # Build Docker image
 sudo docker-compose build
@@ -50,10 +55,6 @@ sudo docker-compose up
 
 
 
-# Node modules 
-cd into saleor
-npm i
-npm run-script build -assets
 
 
 # to rebuild and restart docker containers
