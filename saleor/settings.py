@@ -53,20 +53,11 @@ if REDIS_URL:
     CACHE_URL = os.environ.setdefault("CACHE_URL", REDIS_URL)
 CACHES = {"default": django_cache_url.config()}
 
-if os.name == "nt":
-    print("Dev server")
-    DATABASES = {
-        "default": dj_database_url.config(
-            default="postgres://saleor:saleor@localhost:5432/saleor", conn_max_age=600
-        )
-    }
-else:
-    print("Prod server")
-    DATABASES = {
-        "default": dj_database_url.config(
-            default="postgres://itpmaster:Abcd1234@itp-db.cp8mdgkxllrz.us-east-1.rds.amazonaws.com:5432/saleor", conn_max_age=600
-        )
-    }
+DATABASES = {
+    "default": dj_database_url.config(
+        default="postgres://saleor:saleor@localhost:5432/saleor", conn_max_age=600
+    )
+}
 
 
 TIME_ZONE = "America/Chicago"
