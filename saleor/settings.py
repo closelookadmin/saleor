@@ -64,7 +64,7 @@ else:
     print("Prod server")
     DATABASES = {
         "default": dj_database_url.config(
-            default="postgres://saleor:Abcd1234@itpdb.cp8mdgkxllrz.us-east-1.rds.amazonaws.com:5432/saleor", conn_max_age=600
+            default="postgres://itpmaster:Abcd1234@itpdb.cp8mdgkxllrz.us-east-1.rds.amazonaws.com:5432/saleor", conn_max_age=600
         )
     }
 
