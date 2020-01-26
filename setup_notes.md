@@ -51,6 +51,7 @@ sudo docker-compose run web python3 manage.py migrate
 sudo docker-compose run web python3 manage.py collectstatic
 # If you need example data and default admin user
 - sudo docker-compose run web python3 manage.py populatedb --createsuperuser
+sudo docker-compose run web python3 manage.py createsuperuser
 sudo docker-compose up
 
 
