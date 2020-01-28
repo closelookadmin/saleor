@@ -108,7 +108,7 @@ LANGUAGES = [
     # ("zh-hant", _("Traditional Chinese")),
 ]
 LOCALE_PATHS = [os.path.join(PROJECT_ROOT, "locale")]
-USE_I18N = True
+USE_I18N = False
 USE_L10N = True
 USE_TZ = True
 
