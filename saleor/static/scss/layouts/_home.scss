@@ -39,6 +39,10 @@
       display: block;
       padding-top: 100%;
     }
+    @media only screen and (min-width: 768px) {
+      margin-left:-12%;
+      margin-right:-12%;
+    }
   }
   &__block1 {
     .home--square {
