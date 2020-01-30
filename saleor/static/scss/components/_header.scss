@@ -21,8 +21,8 @@
         transition: 0.3s;
         text-transform: uppercase;
         display: inline-block;
-        padding: $global-padding * 0.7;
-        font-size: 0.7rem;
+        padding: $global-padding * 0.45;
+        font-size: 0.8rem;
         &:hover {
           color: rgba($body-color, 0.6);
         }
