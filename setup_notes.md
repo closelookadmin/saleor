@@ -84,3 +84,18 @@ cd saleor/
 pythoon -m venv venv
 python -m pip install -r requirments.txt
 pip install django-debug-toolbar
+
+
+
+# Notes about dumping and restoring the database
+To dump the database:
+ docker container exec e3c49cec1123 pg_dump -U saleor > /tmp/saleor.backup
+ 
+To copy a file into the container (use container ID instead of b721945fa523) :
+ docker cp /tmp/saleor.backup b721945fa523:/saleor.backup
+
+To get into the container with a bash:
+ docker exec -it saleor_db_1 /bin/bash
+
+To restore the dump:
+ psql -U saleor saleor < saleor.backup
